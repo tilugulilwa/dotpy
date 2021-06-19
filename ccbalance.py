@@ -3,8 +3,11 @@
 # if card owner is paying only a portion of monthtly interest every months
 # =============================================================================
 
+#initial balance at the start of first month
 balance = 484
+#annual interest
 annualInterestRate = 0.2
+#the portion being paid by card owner monthly
 monthlyPaymentRate = 0.04 
 
 for i in range(12):
