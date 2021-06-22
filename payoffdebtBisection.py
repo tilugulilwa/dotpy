@@ -1,5 +1,9 @@
 # =============================================================================
 # an improvement of the previous algorithm using bisection search
+# an interesting hint in this example is -> without applying round function
+# the loop won't end because the else code will never be executed as the first 
+# two if blocks will always be true (eithe of the two) 
+# i.e. updated_month_balance will never go 0 unless rounded
 # =============================================================================
 
 #the outstanding balance on the credit card
@@ -8,12 +12,11 @@ balance  = 999999
 annualInterestRate = 0.18
 #monthly interest rate
 monthly_interest_rate = annualInterestRate/12
-# monthly payment minimum - initial - we start with a guess 10 shs; and keep on incrementing by 10
-# till when balance is <= 0
 
+#Monthly payment lower bound = Balance / 12
 lower_bound = balance/12.0
+#Monthly payment upper bound = (Balance x (1 + Monthly interest rate)12) / 12.0
 upper_bound = (balance*((1+monthly_interest_rate)**12))/12.0
-
 
 
 while(True):

@@ -14,6 +14,10 @@
 # 1. I am supposed to find frequence of occurance for each word
 # =============================================================================
 
+
+'''
+ Returns a dictionary with frequences of occurances
+'''
 def my_lyrics_frequency(lyrics):
     my_dictionary={}
     for word in lyrics:
@@ -24,6 +28,19 @@ def my_lyrics_frequency(lyrics):
             my_dictionary[word] = 1
 
     return my_dictionary
+
+
+def most_common_words(lyrics):
+    values = lyrics.values()
+    best = max(values)
+
+    word = []
+
+    for k in lyrics:
+        if lyrics[k] == best:
+            word.append(k)
+    return (word, best)
+
 
 song = "Didn't know that I'd fall so hard Then my feet left the ground \
 Gravity don't make no sense when you're around \
@@ -96,4 +113,8 @@ It's biblical "
 song = song.split(" ")
 #print(song)
 
-print(my_lyrics_frequency(song))
+song = my_lyrics_frequency(song)
+
+(word, best) = most_common_words(song)
+
+

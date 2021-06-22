@@ -2,10 +2,6 @@
 # This is a continuaton of the previous scenario but in this case
 # we are trying to find which minimum repayment (amount) if done equally every month
 # for one year will reduce/clear the debt (balance) to zero or less/negative
-# 
-# 
-# 
-# 
 # =============================================================================
 
 #the outstanding balance on the credit card
